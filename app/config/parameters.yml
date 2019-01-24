@@ -1,22 +1,24 @@
 # This file is auto-generated during the composer install
 parameters:
-    database_driver: pdo_sqlite
-    database_host: ''
-    database_port: ''
-    database_name: '%kernel.root_dir%/data/tele5.db'
-    database_user: ''
-    database_path: '%kernel.root_dir%/data/tele5.db'
-    database_password: ''
+    database_driver: pdo_mysql
+    database_host: 127.0.0.1
+    database_port: 3306
+    database_name: mediaset
+    database_user: root
+    database_path: null
+    database_password: 1234
     mailer_transport: smtp
     mailer_host: 127.0.0.1
     mailer_user: null
     mailer_password: null
-    player.path: 'http://static1.tele-cinco.net/comun/swf'
+    player.path: http://static1.tele-cinco.net/comun/swf
     app.backup.dir: /BACKUP/mediasat/
     mailto: cincomas@mediaset.es
-    pixelUrl: 'http://stats.telecinco.es/msatu.gif'
+    pixelUrl: http://stats.telecinco.es/msatu.gif
     locale: es
     allow_locales:
         spanish: es
         english: en
     secret: a46e331ccf5fa079f9845ce641e7240b3da731f2
+
+

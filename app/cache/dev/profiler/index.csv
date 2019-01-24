@@ -1,0 +1,5 @@
+df03ca,127.0.0.1,GET,http://127.0.0.1:8000/app_dev.php/es/login,1548326351,
+7d7cb4,127.0.0.1,POST,http://127.0.0.1:8000/app_dev.php/es/login_check,1548326430,
+71506e,127.0.0.1,GET,http://127.0.0.1:8000/app_dev.php/,1548326430,
+64bdfd,127.0.0.1,GET,http://127.0.0.1:8000/app_dev.php/es/,1548326430,
+567362,127.0.0.1,GET,http://127.0.0.1:8000/app_dev.php/es/parrilla,1548326430,
