@@ -1,0 +1,100 @@
+{% block image_widget %}
+    {% spaceless %}
+        {% if asset is not empty %}
+<img src='{{ asset(asset) }}' alt='{{ asset }}' width='{{ width }}' height='{{ height }}' />
+<br />    
+        {% endif %}
+
+        {{ form_widget(form) }}
+
+    {% endspaceless %}
+{% endblock %}
+
+{% block sufix_widget %}
+    {% spaceless %}
+        {{ form_widget(form) }}
+        {% if(sufix is not empty) %}
+<span class="sufix">{{ sufix | trans }}</span> 
+        {% endif %}
+
+    {% endspaceless %}
+{% endblock %}
+
+
+{% block i18n_widget %}
+    {% spaceless %}
+<div class="tabs">
+    <ul>
+        {% for locale in locales %}
+            <li class="{{ locale }}">
+                <a href="#{{ name }}-{{ locale }}">&nbsp;</a>
+            </li>
+        {% endfor %}
+    </ul>
+
+    {% for locale in locales %}
+        <div id="{{ name }}-{{ locale }}" class="tab">
+            {% set field_name = full_name ~ '[' ~ locale ~ ']' %}
+            {% set type = type|default('text') -%}
+            
+            {% if value[locale] is defined %}
+                {% set data = value[locale] %}
+            {% else %}
+                {% set data = "" %}
+            {% endif %}            
+            
+            {% if widget == 'textarea' %}
+                <textarea name="{{ field_name }}">{% if data is not empty %}{{ data }}{% endif %}</textarea>
+            {% else %}
+                <input type="{{ type }}" name="{{ field_name }}" {% if data is not empty %}value="{{ data }}" {% endif %}/>
+            {% endif %}
+            
+            
+            
+        </div>
+    {% endfor %}            
+
+</div>            
+    {% endspaceless %}
+{% endblock %}
+
+{% block form -%}
+    {{ form_start(form) }}
+        {{- form_widget(form) -}}
+    {{ form_end(form) }}
+{%- endblock form %}            
+
+{% block form_widget_compound -%}
+<ul {{ block('widget_container_attributes') }}>
+        {%- if form.parent is empty -%}
+            {{ form_errors(form) }}
+        {%- endif -%}
+        {{- block('form_rows') -}}
+        {{- form_rest(form) -}}
+</ul>
+{%- endblock form_widget_compound %}                        
+
+{% block form_row -%}
+<li>
+        {{- form_label(form) -}}
+        {{- form_errors(form) -}}
+        {{- form_widget(form) -}}
+</li>
+{%- endblock form_row %}
+
+{% block button_row -%}
+<li>
+        {{- form_widget(form) -}}
+</li>
+{%- endblock button_row %}
+
+{% block choice_widget_expanded -%}
+    <div {{ block('widget_container_attributes') }}>
+    {%- for child in form %}
+        <div>
+        {{- form_widget(child) -}}
+        {{- form_label(child) -}}
+        </div>
+    {% endfor -%}
+    </div>
+{% endblock choice_widget_expanded %}

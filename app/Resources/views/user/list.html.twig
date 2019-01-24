@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+
+<div class="form_content total list">
+
+    <div class="new-user-wrapper">
+        <a href="{{ path('users_new') }}" class="new-user">
+            {{ 'user.new' | trans }}
+        </a>
+    </div>
+
+
+    <ul class="listado">
+        {% for user in pager.currentPageResults %}
+        <li>
+            <p class='row'>{{ user.username }} ({{ user.email }}) </p>
+            <p class='buttons'>
+                <a class="edit" href="{{ path ('users_edit', {id:user.id}) }}">
+                    {{ 'user.edit' | trans }}
+                </a>
+                <a class="stats" href="{{ path ('stats_user', {id:user.id}) }}">
+                    {{ 'stats.user' | trans }}
+                </a>
+                <a class="delete" href="{{ path ('users_delete', {id:user.id, page:app.request.get('page')}) }}">
+                    {{ 'user.delete' | trans }}
+                </a>
+            </p>
+        </li>
+        {% endfor %}    
+
+    </ul>
+    <div class="pg_paginator">
+        {% if pager.haveToPaginate %}
+            {{ pagerfanta(pager, 'default_translated') }}
+        {% endif %}
+    </div>
+
+</div>	
+
+
+
+
+
+{% endblock %}
+
+

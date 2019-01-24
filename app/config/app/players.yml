@@ -1,0 +1,33 @@
+app:
+    players:
+        internacional:
+            url: %player.path%/playerTele5.swf?1822222793
+            background: images/cartela.jpg
+            autoplay: 'true'
+            title: mediasat
+            subtitle: mediasat
+            scrubbing: 'false'
+            rtmp: 'true'
+            channel: internacional            
+                
+#        telecinco:
+#            player_url: %player.path%/playerTele5.swf?1822222793
+#            autoplay: 'true'
+#            titulo: telecinco
+#            subtitulo: telecinco
+#            scrubbing: 'false'
+#            rtmp: 'true'
+#            url: telecinco_HD
+#            combo: Telecinco en directo
+#            background_img: http://telecincostatic-a.akamaihd.net/masdetelecinco/Directo-telecincoes_MDSIMA20111027_0289_1.png
+#            
+#        cuatro:
+#            player_url: %player.path%/playerCuatro.swf?1219387382
+#            autoplay: 'true'
+#            titulo: cuatro
+#            subtitulo: cuatro
+#            scrubbing: 'false'
+#            rtmp: 'true'
+#            url: cuatro_backup
+#            combo: Cuatro en directo
+#            background_img: http://cuatrostatic-a.akamaihd.net/ajuste-de-cuentas/frame_MDSIMA20130419_0253_5.jpg

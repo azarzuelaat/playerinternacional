@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% trans_default_domain 'legal' %}
+{% block content %}
+
+<h2 class="legal">
+    <a name="ancla"></a>
+    {{ info.title }} 
+    
+    {% if info.linkAnchor is not empty  and info.linkHref is not empty %}
+        <a href="{{ info.linkHref }}">{{ info.linkAnchor }}</a>
+    {% endif %}
+    
+    
+</h2>
+
+<ul class="con_gen">
+    {% for legal in items%}
+    <li>
+        <a href="#ancla{{legal.number}}">
+        {{ legal.number }}.    
+        {{ legal.name }}
+        </a>
+    </li>
+    {% endfor %}
+</ul>
+
+{% for legal in items%}
+<div class="con_gen_pf">
+    <a name="ancla{{legal.number}}"></a>
+    
+    <b>{{ legal.number }}. {{ legal.name }}</b>
+    {{ legal.text  | raw}}
+    <a href="#ancla" class="arrow_top"></a>
+</div>    
+{% endfor %}
+
+{% endblock %}

@@ -1,0 +1,7 @@
+{% set route = app.request.get('_route')%}
+
+{% if is_granted('ROLE_USER') and route!='home' %}
+<a class="back_list" href="{{ path('home') }}" >
+                {{ 'menu.promos' | trans }}
+</a>
+{% endif %}

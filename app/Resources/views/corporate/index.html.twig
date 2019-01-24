@@ -1,0 +1,56 @@
+{% extends 'basemsv.html.twig' %}
+
+{% block scriptmsv %}
+<script src="//static4.tele-cinco.net/msv/js/msv.js?v=v4.10.0"></script>
+{% endblock  %} 
+
+{% block content %}
+
+<div class="form_content video_info">
+    <div class="video_header corp_hd">
+        <h2 class="corp_hd">{{ 'promo.weare' | trans }}</h2>
+        {% include 'submenu.html.twig' %}        
+    </div>
+
+    {% include 'player.html_1.twig' with {'width': '654', 'height':'368', 'num':'01', 'video':somos.video, 'data':somos.url} %}
+
+    <div class="video_header corp_hd">
+        <h2 class="corp_hd">{{ 'promo.lifetv' | trans }}</h2>
+               
+    </div>
+
+    {% include 'player.html_1.twig' with {'width': '654', 'height':'368','num':'02', 'video':vive.video, 'data':vive.url} %}
+
+    <div class="video_header corp_hd">
+        <h2 class="corp_hd">{{ 'promo.serialstv' | trans }}</h2>
+               
+    </div>
+
+    {% include 'player.html_1.twig' with {'width': '654', 'height':'368','num':'03', 'video':series.video, 'data':series.url} %}
+    
+    <div class="video_header corp_hd">
+        <h2 class="corp_hd">{{ 'promo.programstv' | trans }}</h2>
+               
+    </div>
+
+    {% include 'player.html_1.twig' with {'width': '654', 'height':'368','num':'04', 'video':programa.video, 'data':programa.url} %}
+
+    <div class="video_header corp_hd">
+        <h2 class="corp_hd">{{ 'promo.hoststv' | trans }}</h2>
+               
+    </div>
+
+    {% include 'player.html_1.twig' with {'width': '654', 'height':'368','num':'05', 'video':presentadores.video, 'data':presentadores.url} %}
+    
+    <div class="video_header corp_hd">
+        <h2 class="corp_hd">{{ 'promo.premieretv' | trans }}</h2>
+               
+    </div>
+
+    {% include 'player.html_1.twig' with {'width': '654', 'height':'368','num':'06', 'video':estrenos.video, 'data':estrenos.url} %}
+    
+</div>
+
+{% endblock %}
+
+

@@ -1,0 +1,250 @@
+form ul li {
+    margin-top: 12px;
+}
+
+form ul li select {
+    font-size: 14px;
+}
+
+#promo_day{
+    overflow: hidden;
+    width: 135px;
+}
+
+#promo_day label{
+    width: 85px;
+    font-weight: normal;
+    line-height: 25px;
+    display: inline;
+}
+
+#promo_day input{
+
+    width: 31px;
+    height: 20px;
+    display: inline;
+
+
+}
+
+form ul li label{
+    float:left;
+    width: 165px;
+    font-weight: bold;
+    text-align: left;
+    padding-right: 10px;
+}
+
+form ul li label:after{
+    content: ":";
+}
+
+.form_content input, .form_content textarea {
+    background: none repeat scroll 0 0 #ededed;
+    border: 1px solid #cccccc;
+    color: #5e5e5e;
+    font-size: 14px;
+    height: 30px;
+    padding: 0 10px;
+    width: 320px;
+}
+
+
+
+.form_content textarea {
+    height: 105px;
+    padding: 10px;
+}
+
+.form_content label {
+    line-height: 33px;
+}
+
+.form_content input#promo_file {
+    background: none;
+    border:none;
+    padding: 7px 0 0 0;
+    font-size: 12px;
+}
+
+.form_content form ul{
+    width:520px;
+}
+
+.form_content form ul#promo li:nth-child(4), .form_content form ul li:nth-child(14), .form_content form ul li:nth-child(16) {
+    padding-bottom:20px;
+    border-bottom: 2px dashed #ccc;
+    margin-bottom:20px;
+    width:520px;
+}
+
+.form_content input#promo_year, .form_content input#promo_seasons, .form_content input#promo_episodes, .form_content input#promo_duration, .form_content input#promo_ratio{
+    width:100px;
+}
+
+.form_content input#promo_cuote, .form_content input#promo_viewers{
+    width:28px;
+    text-align: right;
+    margin-right: 5px;
+}
+
+.form_content input#promo_viewers{
+    width:28px;
+}
+
+.form_content button#promo_send {
+    background: none repeat scroll 0 0 #5e5e5e;
+    border: medium none;
+    color: #fff;
+    cursor: pointer;
+    padding: 0;
+    width: 150px;
+    float: right;
+    line-height: 30px;
+    font-size: 16px;
+}
+
+.form_content form ul li:nth-child(21) {
+    width:517px;
+    overflow: hidden;
+    margin:20px 0;
+}
+form .form-fields {overflow: hidden;}
+
+
+.form_content form ul.form-fields.left_block.edit_user li:nth-child(4) {
+    padding-bottom:0;
+    border-bottom: 0;
+    margin-bottom:0;
+    width:50px;
+}
+
+.sender.foredit {
+    width: 400px;
+    margin:20px 0 20px 5px;
+    float:none;
+}
+
+.sender.foredit input {
+    width:100px;
+    background: none repeat scroll 0 0 #5e5e5e;
+    color: #fff;
+    cursor: pointer;
+}
+
+ul#pass_password {
+    margin-left: -5px;
+}
+
+ul.form-fields.left_block.edit_user li {
+    margin-top: 0;
+
+}
+
+.form_content.total.list ul#task {
+    overflow: hidden;
+}
+
+.form_content.total.list ul#task button#task_send, .form_content.total.list ul#pass button#pass_send, button#legal_send, button#info_send  {
+    background: none repeat scroll 0 0 #5e5e5e;
+    border: medium none;
+    color: #fff;
+    cursor: pointer;
+    float: right;
+    font-size: 16px;
+    line-height: 30px;
+    padding: 0;
+    width: 150px;
+}
+
+.form_content.total.list ul#task li:nth-child(4), .form_content.total.list ul#pass li:nth-child(4) {
+    border:none; 
+}
+
+.form_content.total.list ul#task {
+    border-bottom: 2px dashed #ccc;
+
+    padding-bottom: 20px;
+    width: 520px;
+}
+
+.form_content.total.list ul#pass {
+    padding-bottom: 40px;
+}
+
+.form_content .tab{
+    margin-left: 165px;
+
+}
+
+.form_content .tabs ul{
+    margin-left: 165px;
+    width: 350px;
+    text-align: right;
+    line-height: 10px;
+}
+
+.form_content .tabs ul li{
+    display: inline-block;
+    padding:  0 0 3px 10px;    
+
+    //float:right;
+}
+
+.form_content .tabs ul li.en a{
+    background: url(../img/flags/us.png) no-repeat center center ;
+}
+
+.form_content .tabs ul li.es a {
+    background: url(../img/flags/es.png) no-repeat center center ;
+
+}
+
+.form_content .tabs ul li a{
+    text-decoration: none;
+    color: #000;
+    float:right;
+    width: 16px;
+    height: 11px;    
+    opacity: 0.5;
+}
+
+.form_content .tabs ul li.ui-tabs-active a{
+    font-weight: bold;
+    opacity: 1;
+}
+
+form .error{
+    color:red;
+}
+
+.form_content.total.list nav > span {
+    margin-left: 10px;
+}
+
+.form_content li span.sufix{
+    font-weight: normal;
+}
+
+.form_content input#promo_diary {
+    height: 20px;
+    width: 21px;
+    margin-left:104px; 
+}
+
+#cke_legal_text{
+    margin-left: 175px;
+
+}
+
+
+.form_content form ul#legal {
+    width: 800px;
+}
+
+.form-wrapper{
+    overflow: hidden;
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+    border-bottom: 2px dashed #ccc;
+}

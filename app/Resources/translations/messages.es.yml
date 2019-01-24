@@ -1,0 +1,121 @@
+menu:
+    logout: cerrar sesión
+    users: ver usuarios
+    promos_list: ver promos
+    legal: ver legal
+    promos: volver a la parrilla
+    live: CincoMAS en vivo
+    corpo: Vídeos CincoMAS
+
+user:
+    edit: editar
+    delete: borrar
+    new: nuevo usuario
+    
+legal:
+    edit: editar
+    delete: borrar
+    new: nuevo item
+
+form:
+    username: Usuario
+    email: Email
+    password: Contraseña
+    repeat_password: Repite la Contraseña
+    new_password: Nueva Contraseña
+    save: Guardar
+    title: Título
+    summary: Descripción
+    video: Vídeo
+    image: Thumb
+    year: Año de producción
+    seasons: Temporadas
+    episodes: Episodios
+    duration: Duración
+    day: Días
+    time: Hora
+    ratio: Aspecto
+    channel: Canal
+    language: Idioma
+    cuote: Cuota de espectadores
+    viewers: Total de espectadores
+    website: Sitio web
+    facebook: Facebook
+    twitter: Twitter
+    store: Ventas internacionales
+    percent: %
+    millions: millones
+    diary: Emisión diaria
+    order: Orden
+    name: Nombre
+    text: Texto
+    href: Link href
+    anchor: Link anchor
+
+promo:
+    year: año
+    seasons: temporadas
+    weare: ¿Quiénes somos?
+    lifetv: CincoMAS
+    premieretv: Estrenos CincoMAS
+    serialstv: Series CincoMAS
+    programstv: Programas CincoMAS
+    hoststv: Presentadores CincoMAS    
+    episodes: episodios
+    episodes_diary: Episodios Diarios
+    duration: duración
+    ratio: aspecto
+    language: idioma
+    minutes: minutos
+    audience:
+        label: Audiencia
+        text: Cuota del <b>%cuote%%</b> y <b>%total%</b> millones de espectadores
+    website: Ir a la web
+    facebook: Facebook
+    twitter: Twitter
+    store: Ventas internacionales
+    channel: canal
+    new: Nueva promo
+    edit: editar
+    delete: borrar
+
+
+layout:
+    title: CincoMAS
+    welcome: Para acceder a <b>CincoMAS</b> canal internacional de Mediaset España, introduzca sus claves de acceso
+    keylink: Contacte <a href="mailto:%mailto%" >aquí</a> para conseguir sus claves de acceso
+    back_home: Volver a la parrilla
+    learn_more: Pulse en cada contenido para saber más
+
+footer: 
+    corporate: Información corporativa
+    rights: Todos los derechos reservados
+    warning: Aviso legal
+    reserved: Política de privacidad
+    cookies: y de cookies
+    contact: Contacte con nosotros
+
+stats:
+    views: visitas
+    serie: promociones vistas
+    user: estadisticas
+
+selector:
+    english: english  
+    spanish: español
+    
+city:
+    ba: Buenos Aires
+    ny: Nueva York
+    mex: México DF
+    
+spanish: español
+english: ingles  
+
+monday: lunes
+tuesday: martes
+wednesday: miércoles
+thursday: jueves
+friday: viernes
+saturday: sábado
+sunday: domingo

@@ -1,0 +1,17 @@
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+    
+app:
+    resource: @AppBundle/Controller/
+    type:     annotation
+#    
+#users:
+#    resource: @AppBundle/Controller/UserController
+#    type:     annotation
+
+root:
+    path:     /
+    defaults:
+        _controller: FrameworkBundle:Redirect:redirect
+        route: home
+        permanent: true

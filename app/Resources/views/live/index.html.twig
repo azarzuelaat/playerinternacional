@@ -1,0 +1,32 @@
+{% extends 'basemsv.html.twig' %}
+{% block scriptmsv %}
+    <script>
+        jQuery(document).ready(function() {
+        if(!window.MSPlayer) window.MSPlayer = {};
+        window.MSPlayer.basePath = "{{ msplayerPath }}";
+        });
+    </script>
+    <link rel="stylesheet" href="{{ msplayerCSS }}">
+{% endblock scriptmsv %}  
+
+{% block content %}
+<div class="form_content video_info">
+    <div class="video_header">
+        <h2>{{ 'menu.live' | trans }}</h2>
+        {% include 'submenu.html.twig' %}        
+    </div>
+
+    {% include 'playerlive.html.twig' with {'width': '970', 'height':'546', 'player':player, 'data':'MDSMVS00000000_0001;internacional'} %}
+  
+  {#  {% include 'pixel.html.twig' with {'userId': pixel.email, 'contentId':'directo'} %} #}
+ 
+
+</div>
+
+{% endblock %}
+
+{% block later_script %}  
+    <script type="text/javascript" src="https://imasdk.googleapis.com/js/sdkloader/ima3.js"></script>
+    <script type="text/javascript" src="{{ msplayerjs }}"></script>
+    <script type="text/javascript" src="{{ cryptojs}}"></script>
+{% endblock later_script %}  

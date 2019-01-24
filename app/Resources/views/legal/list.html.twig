@@ -1,0 +1,60 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+
+<div class="form_content total list">
+
+    {% for flashMessage in app.session.flashbag.get('form') %}
+    <div class="flash-notice">
+            {{ flashMessage }}
+    </div>
+    {% endfor %}    
+    
+    <div class="form-wrapper">
+    {{ form(form) }}
+    </div>
+    
+    <div class="new-user-wrapper">
+        <a href="{{ path('legal_new') }}" class="new-user">
+            {{ 'legal.new' | trans }}
+        </a>
+    </div>
+
+
+    <ul class="listado">
+        {% for legal in pager.currentPageResults %}
+        <li>
+            <p class='row'><b>#{{ legal.number }}</b> {{ legal.name }} </p>
+            <p class='buttons'>
+                <a class="edit" href="{{ path ('legal_edit', {id:legal.id}) }}">
+                    {{ 'legal.edit' | trans }}
+                </a>
+                <a class="delete" href="{{ path ('legal_delete', {id:legal.id, page:app.request.get('page')}) }}">
+                    {{ 'legal.delete' | trans }}
+                </a>
+            </p>
+        </li>
+        {% endfor %}    
+
+    </ul>
+    <div class="pg_paginator">
+        {% if pager.haveToPaginate %}
+            {{ pagerfanta(pager, 'default_translated') }}
+        {% endif %}
+    </div>
+
+</div>	
+{% endblock %}
+
+{% block scripts %}
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('form').validate({
+             errorElement: "p"
+        });
+    });
+</script>
+{% endblock %}
+
+

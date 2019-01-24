@@ -1,0 +1,20 @@
+<div id="player" class="videoEmbed {{ player.name }}" data-storage="bcube" data-video="{{ data }}" style="height:{{ height }}px; width: {{ width }}px">
+    <div class="mg">
+        <a href="#">
+            <img src="{{ asset(player.background) }}" width="{{ width }}px" height="{{ height }}px"  />
+            <span class="ctinf vid">
+                <span class="stamp">
+                    <span class="ico"></span>
+                    <em class="ic-tx">Vídeo</em>
+                </span>
+            </span>
+        </a>
+    </div>
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+    var config = '{{ player.config }}';
+    var player = '{{ player.url }}';
+//]]>
+</script>

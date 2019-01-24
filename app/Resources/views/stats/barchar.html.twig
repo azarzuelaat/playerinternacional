@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+<div id='statics' style='width:800px; height: 800px'>
+
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+<script src="http://code.highcharts.com/2.2.4/highcharts.js"></script>
+
+<script>
+    $(document).ready(function() {
+        new Highcharts.Chart({{ options | raw}});
+    });
+</script>
+
+{% endblock %}

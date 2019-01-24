@@ -1,0 +1,58 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+
+<div class="form_content">
+
+    <div id="parrilla">
+        <ul class="tabs">
+            {% for key in promosPerWeek|keys %}
+            <li><a href="#{{ key }}">{{ key | trans }}</a></li>
+            {% endfor %}
+        </ul>
+
+        <ul class="promo title">
+            <li class="hour">{{ 'city.ba' | trans }}</li>
+            <li class="hour">{{ 'city.ny' | trans }}</li>
+            <li class="hour">{{ 'city.mex' | trans }}</li>                
+            <li class="detail">
+                {{ 'layout.learn_more' | trans }}
+            </li>
+        </ul>        
+        
+        {% for key, promosPerDay in promosPerWeek %}
+        <ul id="{{ key }}">
+            {% for promo in promosPerDay %}
+            <li>
+                <ul class="promo grid">
+                    <li class="hour">{{ promo.time |date_modify(timeDiff.Buenos_Aires ~ ' hour')|date("H:i") }}</li>
+                    <li class="hour">{{ promo.time |date_modify(timeDiff.Nueva_York ~ ' hour')|date("H:i") }}</li>
+                    <li class="hour">{{ promo.time |date_modify(timeDiff.Mexico ~ ' hour')|date("H:i") }}</li>                
+                    <li class="detail">
+                        <img src="{{ asset(promo.webImage) }}" />
+
+                        <div class="sinopsis_container">
+                            <h2>
+                                <a href="{{ path('promo', {id:promo.id}) }}">
+                                    {{ promo.title[app.request.get('_locale')] }}
+                                </a>                
+                            </h2>
+
+{#                            <p>{{ promo.summary[app.request.get('_locale')] }}</p>
+#}
+                            <a class="more_sinopsis" href="{{ path('promo', {id:promo.id}) }}"></a>
+                        </div>
+
+                    </li>
+                </ul>
+
+            </li>
+            {% endfor %}
+        </ul>
+        {% endfor %}
+
+    </div>
+
+</div>
+
+{% endblock %}

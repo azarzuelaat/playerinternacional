@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+
+
+<div class="wrapper">
+
+    <div class="form_content total list">
+
+        <div class="new-user-wrapper">
+            <a href="{{ path('promos_new') }}" class="new-user">
+                {{ 'promo.new' | trans }}
+            </a>
+        </div>
+
+        <ul class="listado">
+            {% for promo in pager.currentPageResults %}
+            <li>
+                <p class='row'>{{ promo.title[app.request.get('_locale')] }} ({{ promo.channel }}) </p>
+                <p class='buttons'>
+                    <a class="edit" href="{{ path ('promos_edit', {id:promo.id}) }}">
+                        {{ 'promo.edit' | trans }}
+                    </a>
+
+                    <a class="stats" href="{{ path ('stats_promo', {id:promo.id}) }}">
+                    {{ 'stats.user' | trans }}
+                    </a>
+
+                    <a class="delete" href="{{ path ('promos_delete', {id:promo.id}) }}">
+                        {{ 'promo.delete' | trans }}
+                    </a>
+                </p>
+
+            </li>
+            {% endfor %}    
+
+        </ul>
+        {% if pager.haveToPaginate %}
+            {{ pagerfanta(pager, 'default_translated') }}
+        {% endif %}
+
+    </div>	
+
+</div>
+
+
+
+{% endblock %}
+
+

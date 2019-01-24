@@ -1,0 +1,119 @@
+{% extends 'base.html.twig' %}
+
+{% trans_default_domain 'promos' %}
+
+{% block content %}
+
+<div class="form_content video_info">
+    <div class="video_header">
+        <h2>{{ promo.title[app.request.get('_locale')] }}</h2>
+        {% include 'submenu.html.twig' %}        
+    </div>
+
+    
+    <div class="video_content"> 
+
+        <div class="video_player">
+            {% include 'player.html.twig' with {'width': '654', 'height':'368', 'player':player, 'data':promo.url} %}
+        </div>    
+
+        
+        <div class="video_information">
+
+            <ul class="information_fields">
+                <li>
+                    <span>{{ 'promo.year' | trans({},'messages') }}:</span> <b>{{ promo.year}}</b>        
+                </li>
+                
+                {% if promo.diary %}
+                <li>
+                    <span>{{ 'promo.episodes_diary' | trans({},'messages') }}:</span> <b>{{ promo.episodes}}</b>            
+                </li>                                        
+                {% else %}
+                <li>
+                    <span>{{ 'promo.seasons' | trans({},'messages') }}:</span>  <b>{{ promo.seasons}}</b>            
+                </li>
+                <li>
+                    <span>{{ 'promo.episodes' | trans({},'messages') }}:</span> <b>{{ promo.episodes}}</b>            
+                </li>        
+
+                {% endif %}
+                
+                
+                <li>
+                    <span>{{ 'promo.duration' | trans({},'messages') }}: </span> <b>{{ promo.duration }}  {{ 'promo.minutes' | trans({}, "messages") }} </b>          
+
+                </li>
+                <li>
+                    <span>{{ 'promo.ratio' | trans({},'messages') }}:</span> <b>{{ promo.ratio}}</b>
+                </li>
+                <li>
+                    <span>{{ 'promo.language' | trans({},'messages') }}:</span> <b class="capitalize">{{ promo.language | trans({}, "messages") }}</b>
+                </li>
+                <li>
+                    <span>{{ 'promo.channel' | trans({},'messages') }}:</span> <b class="capitalize">{{ promo.channel }}</b>
+                </li>
+
+                    {% if promo.audience.cuote is not null and  promo.audience.total is not null%}
+                <li>
+                    <span>{{ 'promo.audience.label' | trans({}, "messages") }}:</span> {{ 'promo.audience.text' | trans({'%cuote%': promo.audience.cuote, '%total%': promo.audience.total}, "messages") | raw }}
+                </li>
+                    {% endif %}
+               
+            </ul>
+
+            <ul class="social_buttons">
+
+                {% if promo.website is not null%}
+                <li>
+                    <a class="btn website" href="{{ promo.website }}" target="_blank">
+                            {{ 'promo.website' | trans({}, "messages") }}
+                    </a>
+                </li>
+                    {% endif %}
+
+                {% if promo.twitter is not null%}
+                <li>
+                    <a class="btn soc_link twitter" href="{{ promo.twitter }}" target="_blank">
+                            <!--{{ 'promo.twitter' | trans({}, "messages") }}-->
+                    </a>
+                </li>
+                {% endif %}  
+
+                    {% if promo.facebook is not null%}
+                <li>
+                    <a class="btn soc_link" href="{{ promo.facebook }}" target="_blank">
+                            <!--{{ 'promo.facebook' | trans({}, "messages") }}-->
+                    </a>
+                </li>
+                    {% endif %}        
+
+      
+
+                    {% if promo.store is not null%}
+                <li>
+                    <a class="btn promo_store" href="{{ promo.store }}" target="_blank">
+                            {{ 'promo.store' | trans({}, "messages") }}
+                    </a>
+                </li>
+                    {% endif %}
+
+            </ul>
+
+       </div>
+
+    </div>
+
+    <p class="sinopsis">{{ promo.summary[app.request.get('_locale')] }}</p>
+
+    
+{#
+    {% include 'pixel.html.twig' with {'userId': pixel.email, 'contentId':pixel.promo} %}    
+#}
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+<script src="//static4.tele-cinco.net/msv/js/msv.js?v=v4.10.0"></script>
+{% endblock %}

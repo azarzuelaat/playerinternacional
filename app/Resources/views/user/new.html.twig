@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+
+<div class="form_content total list">
+
+    {% for flashMessage in app.session.flashbag.get('form') %}
+    <div class="flash-notice">
+            {{ flashMessage }}
+    </div>
+    {% endfor %}    
+    {% if errorMsg is defined  %}
+             <p class="flash-error">{{errorMsg}}</p>   
+    {% endif %}
+    {% include 'user/form-user.html.twig' %}
+
+</div>	
+
+
+{% endblock %}
+
+
+{% block scripts %}
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('form').validate({
+            errorElement: "p"
+        });
+    });
+</script>
+{% endblock %}

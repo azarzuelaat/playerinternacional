@@ -1,0 +1,24 @@
+<VirtualHost *:80>
+    DocumentRoot /CODE/internacional/web
+    ServerName www.internacional.des
+    DirectoryIndex index.php
+    ErrorLog /CODE/internacional/app/logs/error.log
+    CustomLog /CODE/internacional/app/logs/access.log combined
+
+    SetEnv APPLICATION_ENV dev
+    SetEnv APPLICATION_DEBUG true
+
+    <Directory /CODE/internacional/web>
+        AllowOverride All
+        Order allow,deny
+        Allow from all
+
+        <IfModule mod_rewrite.c>
+            Options -MultiViews
+            RewriteEngine On
+            RewriteCond %{REQUEST_FILENAME} !-f
+            RewriteRule ^(.*)$ index.php [QSA,L]
+        </IfModule>
+
+    </Directory>
+</VirtualHost>

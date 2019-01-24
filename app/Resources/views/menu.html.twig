@@ -1,0 +1,46 @@
+
+{% set route = app.request.get('_route')%}
+
+<nav>
+
+    {% if is_granted('ROLE_USER') %}
+    <a href="{{ path('fos_user_security_logout') }}" class="logout_users">
+            {{ 'menu.logout' | trans }}
+    </a>
+    {% endif %}
+
+    {% if is_granted('ROLE_ADMIN') and route!='users_list' %}
+        <a href="{{ path('users_list') }}" class="access_users">
+                    {{ 'menu.users' | trans }}
+        </a>
+    {% endif %}
+
+    {% if is_granted('ROLE_ADMIN') and route!='promos_list' %}
+        <a href="{{ path('promos_list') }}" class="access_users">
+                    {{ 'menu.promos_list' | trans }}
+        </a>
+    {% endif %}
+
+    {% if is_granted('ROLE_ADMIN') and route!='legal_list' %}
+        <a href="{{ path('legal_list') }}" class="access_users">
+                    {{ 'menu.legal' | trans }}
+        </a>
+    {% endif %}
+    
+
+</nav>
+
+<nav class="live">
+    {% if is_granted('ROLE_USER') and route != 'live' %}
+    <a href="{{ path('live') }}" class="live_link">
+            {{ 'menu.live' | trans }}
+    </a>
+    {% endif %}
+
+    {% if is_granted('ROLE_USER') and route != 'corporate' %}
+    <a href="{{ path('corporate') }}" class="live_link corp_hd">            
+            {{ 'menu.corpo' | trans }}
+    </a>
+    {% endif %}
+
+</nav>

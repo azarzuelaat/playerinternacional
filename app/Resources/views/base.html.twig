@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=1040">
+        <title>{{ 'layout.title' | trans }}</title>
+        
+        {% stylesheets 
+            '@estilos'
+            filter='cssrewrite'
+        %}        
+            <link rel="stylesheet" href="{{ asset_url }}" />
+        {% endstylesheets %}        
+         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+
+    </head>
+    <body>
+
+        <div class="header_lng">       
+            <nav>
+            {% include 'selector.html.twig' %}
+            </nav>                    
+        </div>
+        <div class="wrapper">
+
+            <header>
+                <h2 class="logo"><a href="{{ path('home') }}"></a></h2>
+                {% include 'menu.html.twig' %}
+            </header>
+
+            {% block content %}
+            {% endblock content %}            
+
+        </div>	
+        
+
+        {% include 'footer.html.twig' %}
+
+        {% javascripts '@javascript'  %}
+            <script src="{{ asset_url }}"></script>
+        {% endjavascripts %}            
+        
+        {% block scripts %}
+        {% endblock scripts %}
+        
+    </body>
+</html>

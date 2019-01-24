@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+{% block content %}
+
+{% trans_default_domain 'FOSUserBundle' %}
+<div class="form_content">
+
+    <form action="{{ path("fos_user_security_check") }}" method="post">
+        <h3>{{ 'layout.welcome' | trans({}, 'messages') | raw }}</h3>
+
+        <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
+        
+
+        <p class="front_logging">
+            <!--<span>{{ 'security.login.username'|trans }}</span>-->
+            <input type="text" id="username" name="_username" value="{{ last_username }}" required="required" />
+        </p>
+        <p class="front_logging">
+            <!--<span>{{ 'security.login.password'|trans }}</span>-->
+            <input type="password" id="password" name="_password" required="required" />
+        </p>
+
+        {% if error %}
+            <h2 class="credenciales">
+                {{ error.messageKey|trans(error.messageData, 'security') }}
+            </h2>
+        {% endif %}  
+
+        <!--<p class="front_log">
+            <span>{{ 'security.login.remember_me'|trans }}</span>
+            <input type="checkbox" id="remember_me" name="_remember_me" value="on" />
+        </p>-->
+
+        <p class="send front_logging">
+            <input class="send styled-button-1" type="submit" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}" />
+        </p>	
+
+        <h3 class="keylink">{{ 'layout.keylink' | trans({'%mailto%':mailto}, 'messages') | raw}}</h3>
+
+    </form>
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.1.47/jquery.form-validator.min.js"></script>
+<script> $.validate();</script>
+{% endblock scripts %}

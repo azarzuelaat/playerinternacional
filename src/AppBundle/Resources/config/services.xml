@@ -1,0 +1,57 @@
+<?xml version="1.0" ?>
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <parameters>
+        <parameter key="app.promos.manager.class">AppBundle\Service\PromosProvider</parameter>
+        <parameter key="app.user.manager.class">AppBundle\Service\UserManager</parameter>
+        <parameter key="app.legal.manager.class">AppBundle\Service\LegalManager</parameter>
+        <parameter key="app.backup.manager.class">AppBundle\Service\BackupManager</parameter>
+        <parameter key="promos.path">%kernel.root_dir%/../web/images/promos</parameter>
+        <parameter key="app.player.provider.class">AppBundle\Service\PlayerProvider</parameter>
+        <parameter key="app.cache.listener.class">AppBundle\Service\AcmeCacheListener</parameter>
+    </parameters>
+
+    <services>
+        <service id="app.promos.manager" class="%app.promos.manager.class%">
+            <argument>%app.players%</argument>
+            <call method="setRouter">
+                <argument type="service" id="router" />
+            </call>            
+            <call method="setDoctrine">
+                <argument type="service" id="doctrine.orm.entity_manager" />
+            </call>            
+            <call method="setRequest">
+                <argument type="service" id="request_stack" />
+            </call>            
+        </service>
+        <service id="app.user.manager" class="%app.user.manager.class%">
+            <argument type="service" id="doctrine.orm.entity_manager"/>
+            <argument type="service" id="fos_user.user_manager"/>
+            <argument type="service" id="security.encoder_factory"/>
+        </service>
+        <service id="app.legal.manager" class="%app.legal.manager.class%">
+            <argument type="service" id="doctrine.orm.entity_manager"/>
+            <argument type="service" id="app.backup.manager"/>
+        </service>
+        <service id="app.backup.manager" class="%app.backup.manager.class%">
+            <argument type="service" id="templating" />
+            <argument type="collection">
+                <argument key="backupDir">%app.backup.dir%</argument>
+                <argument key="databasePath">%database_path%</argument>
+                <argument key="promosPath">%promos.path%</argument>
+            </argument>
+        </service>
+        <service id="app.player.provider" class="%app.player.provider.class%">
+            <argument>%app.players%</argument>
+            <call method="setRouter">
+                <argument type="service" id="router" />
+            </call>            
+        </service>
+        <service id="app.cache.listener" class="%app.cache.listener.class%">
+            <tag name="kernel.event_listener" event="kernel.response" method="onKernelResponse" />           
+        </service>
+    </services>
+        
+</container>

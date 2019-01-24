@@ -1,0 +1,120 @@
+menu:
+    logout: logout
+    users: view users
+    promos_list: view promos
+    legal: view legal
+    promos: Back
+    live: CincoMAS live
+    corpo: CincoMAS Videos
+
+user:
+    edit: edit
+    delete: delete
+    new: new user
+    
+legal:
+    edit: edit
+    delete: delete
+    new: new item
+    
+form:
+    username: Username
+    email: Email
+    password: Password
+    repeat_password: Repeat password
+    new_password: New password
+    save: Save
+    title: Title
+    summary: Summary
+    video: Video
+    image: Thumb
+    year: Production year
+    seasons: Seasons
+    episodes: Episodes
+    duration: Duration
+    day: days
+    time: time
+    ratio: Ratio
+    channel: Channel
+    language: Language
+    cuote: Cuote
+    viewers: Viewers
+    website: Website
+    facebook: Facebook
+    twitter: Twitter
+    store: Internacional sales
+    percent: %
+    millions: millions    
+    diary: Daily broadcast
+    order: Order
+    name: Name
+    text: Text    
+    href: Link href
+    anchor: Link anchor    
+
+promo:
+    year: year
+    seasons: seasons
+    weare: Who we are?
+    lifetv: CincoMAS
+    premieretv: CincoMAS premiere
+    serialstv: CincoMAS series
+    programstv: CincoMAS programs
+    hoststv: CincoMAS hosts
+    episodes: episodes
+    episodes_diary: Diary episodes
+    duration: duration
+    ratio: aspect
+    language: language
+    minutes: minutes
+    audience:
+        label: Audience
+        text: Share <b>%cuote%%</b> and <b>%total%</b> million viewers
+    website: Go to website
+    facebook: Facebook
+    twitter: Twitter
+    store: Internacional sales
+    channel: channel
+    new: New promo
+    edit: edit
+    delete: delete
+
+layout:
+    title: CincoMAS
+    welcome: To access international channel Mediaset enter your credentials
+    keylink: Click <a href="mailto:%mailto%" >here</a> to get your access codes
+    back_home: Back to programs
+    learn_more: Click on each content to know more
+
+footer: 
+    corporate: Corporate information
+    rights: All rights reserved 
+    warning: Legal notice
+    reserved: Privacy policy
+    cookies: and cookies
+    contact: Contact with us
+
+stats:
+    views: views
+    serie: view pomos
+    user: stats
+    
+selector:
+    english: english  
+    spanish: español    
+
+city:
+    ba: Buenos Aires
+    ny: New York
+    mex: Mexico DF
+
+spanish: spanish
+english: english
+
+monday: monday
+tuesday: tuesday
+wednesday: wednesday
+thursday: thursday
+friday: friday
+saturday: saturday
+sunday: sunday

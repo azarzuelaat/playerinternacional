@@ -1,0 +1,132 @@
+#parrilla .tabs{ 
+    overflow: hidden;
+    border-bottom: 4px solid  #333;
+    height: 39px;
+}
+
+#parrilla .tabs li a {
+    float:left;
+    width:138px;
+    text-align: center;
+    height: 31px;
+    margin-top: 4px;
+    padding-top: 4px;
+    background-color: #38c2f0;
+}
+
+#parrilla .tabs li a#ui-id-7 {
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+#parrilla .tabs li a:hover {
+    background: #353434;
+    font-weight: bold;
+}
+
+#parrilla .tabs li.ui-state-active a{
+    background-color: #353434;
+    height: 35px;
+    margin-top: 0;
+    padding-top: 4px;
+    font-weight: bold;
+}
+
+#parrilla .tabs li a{
+    color: #FFF;
+    text-decoration: none;
+    font-size: 19px;
+    text-transform: uppercase;
+    line-height: 29px;
+}
+
+#parrilla .title {}
+
+#parrilla .title .detail {
+    text-align: right;
+}
+
+#parrilla .promo {
+    overflow: hidden;
+}
+
+#parrilla .promo li{
+    float:left;
+    margin-left: 5px;
+    border-top: 1px solid #333;
+    padding: 14px 10px;
+    line-height: 30px;
+}
+
+#parrilla .promo.title li{
+    border-top: none;
+}
+
+#parrilla .promo li.hour{
+    width:6.5%;
+    text-align: center;
+    line-height: 18px;
+    font-size: 16px;
+}
+
+
+#parrilla .promo li.detail{
+    width:70%;
+}
+
+#parrilla .promo li.detail img{
+    margin-right: 18px;
+    width: 200px;
+    height: 113px;
+    float: left;
+
+}
+
+#parrilla .promo li.detail .sinopsis_container {
+    float:right;
+    width:460px;
+    padding-bottom: 45px;
+    position: relative;
+    min-height: 55px;
+}
+
+#parrilla .promo li.detail .sinopsis_container a.more_sinopsis {
+    position: absolute;
+    width:34px;
+    height:34px;
+    background-position: -8px -223px;
+    bottom: 0;
+    right:0;
+}
+
+#parrilla .promo li.detail .sinopsis_container a.more_sinopsis:hover {
+    background-position: -8px -267px;
+}
+
+#parrilla .promo li.detail .sinopsis_container p {
+    line-height: 20px;
+}
+
+
+#parrilla .promo li.detail h2 {
+    line-height: 20px;
+    margin-bottom: 10px;
+}
+    
+#parrilla .promo li.detail h2 a{
+    color: #3e3e3e;
+    text-decoration: none;
+    font-size: 21px;
+    /*text-transform: capitalize;*/
+    font-weight: bold;
+
+}
+
+#parrilla .promo li.detail h2 a:hover{
+    color: #38c2f0;
+    font-weight: bold;
+}
+
+#parrilla .title li.hour{
+    font-weight: bold;
+}

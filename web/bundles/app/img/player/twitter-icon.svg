@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="68px" height="58px" viewBox="0 0 68 58" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 3.8.3 (29802) - http://www.bohemiancoding.com/sketch -->
+    <title>02B31EF7-0D9C-4A0D-9492-F12D8D6213E2</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="player" transform="translate(-318.000000, -587.000000)" fill="#FFFFFF">
+            <g id="Group-5" filter="url(#filter-1)" transform="translate(321.000000, 589.000000)">
+                <g id="redes-twitter">
+                    <path d="M60.9795349,6.30622093 C58.7423256,7.29866279 56.3376744,7.96959302 53.8144186,8.27075581 C56.3894186,6.72656977 58.367907,4.28180233 59.2993023,1.36843023 C56.8888372,2.7980814 54.2190698,3.83645349 51.3772093,4.39575581 C49.1016279,1.97133721 45.859186,0.45622093 42.270814,0.45622093 C34.217907,0.45622093 28.2981395,7.97133721 30.117907,15.7748256 C19.7493023,15.2550581 10.5568605,10.2876163 4.40337209,2.73994186 C1.13534884,8.34633721 2.70860465,15.6829651 8.2644186,19.3963372 C6.21965116,19.3318023 4.29523256,18.7701744 2.61383721,17.8358721 C2.47837209,23.6155233 6.62023256,29.0207558 12.6196512,30.2259884 C10.8644186,30.7038953 8.94116279,30.8131977 6.98593023,30.4399419 C8.57313953,35.3957558 13.1812791,39.0027326 18.6405814,39.103314 C13.3952326,43.2137791 6.78883721,45.0498256 0.170232558,44.269593 C5.69116279,47.8091279 12.2487209,49.8748256 19.2940698,49.8748256 C42.4568605,49.8748256 55.542907,30.3108721 54.7539535,12.7643605 C57.1923256,11.0056395 59.3068605,8.80796512 60.9795349,6.30622093" id="Fill-57"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

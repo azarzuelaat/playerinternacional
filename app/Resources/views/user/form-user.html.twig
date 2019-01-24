@@ -1,0 +1,7 @@
+{% if form.vars.errors|length %}
+<div class="flash-error">
+    {{ form_errors(form) }}
+</div>        
+{% endif%}
+
+{{ form(form, {attr:{"autocomplete":"off"}})}}
