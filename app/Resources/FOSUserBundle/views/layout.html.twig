@@ -12,11 +12,11 @@
 
         <p class="front_logging">
             <!--<span>{{ 'security.login.username'|trans }}</span>-->
-            <input type="text" id="username" name="_username" value="{{ last_username }}" required="required" />
+            <input type="text" id="username" name="_username" value="{{ last_username }}" placeholder="Usuario" required="required" />
         </p>
         <p class="front_logging">
             <!--<span>{{ 'security.login.password'|trans }}</span>-->
-            <input type="password" id="password" name="_password" required="required" />
+            <input type="password" id="password" name="_password" placeholder="Contraseña" required="required" />
         </p>
 
         {% if error %}
