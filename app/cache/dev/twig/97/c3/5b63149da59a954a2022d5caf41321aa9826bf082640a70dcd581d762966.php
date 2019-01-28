@@ -65,14 +65,14 @@ class __TwigTemplate_97c35b63149da59a954a2022d5caf41321aa9826bf082640a70dcd581d7
             <input type=\"text\" id=\"username\" name=\"_username\" value=\"";
         // line 15
         echo twig_escape_filter($this->env, (isset($context["last_username"]) ? $context["last_username"] : $this->getContext($context, "last_username")), "html", null, true);
-        echo "\" required=\"required\" />
+        echo "\" placeholder=\"Usuario\" required=\"required\" />
         </p>
         <p class=\"front_logging\">
             <!--<span>";
         // line 18
         echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("security.login.password", array(), "FOSUserBundle"), "html", null, true);
         echo "</span>-->
-            <input type=\"password\" id=\"password\" name=\"_password\" required=\"required\" />
+            <input type=\"password\" id=\"password\" name=\"_password\" placeholder=\"Contraseña\" required=\"required\" />
         </p>
 
         ";
